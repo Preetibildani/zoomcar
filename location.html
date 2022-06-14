@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick your Location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <!--location-page-start  -->
+
+    <div class="location-page">
+        <div class="header">
+            <a href="index.html">
+                <i class="icon icon-arrow-left"></i> </a>
+        </div>
+        <div class="main">
+            <div class="component-address-picker">
+                <div class="box">
+                    <div class="wrap">
+                        <a href="#">
+                            <div class="select-address">
+                                <div class="green-icon"></div>
+                                <div class="placeholder"><input type="text" id="map-search" class="controls"
+                                        placeholder="Select your starting point"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="location-options">
+                    <div class="my-location pointer">
+                        <i class="icon icon-my-location"></i>
+                        <div>Current Location</div>
+                    </div>
+                    <a href="map.html" class="map pointer">
+                        <i class="icon icon-map"></i>
+                        <div>
+                            Select Location on Map
+                        </div>
+                    </a>
+                </div>
+                <div class="suggested">
+                    <h3>Suggested Pick Up Locations</h3>
+                    <div class="pointer">
+                        <i class="icon icon-location"></i>
+                        <div>Terminal 2, Delhi Airport</div>
+                    </div>
+                    <div class="pointer">
+                        <i class="icon icon-location"></i>
+                        <div>Terminal 3, Delhi Airport</div>
+                    </div>
+                    <div class="pointer">
+                        <i class="icon icon-location"></i>
+                        <div>Terminal 1, Delhi Airport</div>
+                    </div>
+                    <div class="pointer">
+                        <i class="icon icon-location"></i>
+                        <div>New Delhi, Railway Station</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--location-page-end -->
+
+
+
+
+
+
+    <script src="map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wzKiv1MaS2bETRlpAeJkjJPvRKs8xe0&libraries=places&callback=initialize"></script>
+</body>
+
+</html>
+
+<script>
+
+    let selectLocation = JSON.parse(localStorage.getItem("selectLocation"))[0];
+
+    function initialize() {
+
+        addressEl = document.querySelector('#map-search');
+        searchBox = new google.maps.places.SearchBox(addressEl);
+        google.maps.event.addListener(searchBox, 'places_changed', function () {
+            var places = searchBox.getPlaces(),
+                bounds = new google.maps.LatLngBounds(),
+                i, place, lat, long, resultArray,
+                address = places[0].formatted_address;
+
+            if(selectLocation=="pickup"){
+                localStorage.setItem("pickUpLocation",JSON.stringify([address]));
+            }else{
+                localStorage.setItem("dropOffLocation",JSON.stringify([address]));
+            }
+
+
+            window.location.href="/index.html"
+
+        });
+    }
+</script>

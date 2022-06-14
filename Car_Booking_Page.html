@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/car_booking.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bookingSummary.html">
+    <style>
+        #image{
+         width: 30px;
+         height: 40px;
+        }
+        #main{
+            width: 60%;
+            height: auto;
+            /* border: 1px solid black; */
+           margin-left: 450px;
+            margin-top: -350px;
+        }
+        .bo{
+            display: flex;
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 100%;
+            height: 120px;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .im{
+            height: 100px;
+            width: 200px;
+            /* border: 1px solid green; */
+        }
+        .pp{
+            justify-content: flex-start;
+            padding: 10px;
+           
+            /* line-height: 0; */
+        }
+        .blu{
+            justify-content: end;
+            /* border: 1px solid pink; */
+            margin: auto;
+            margin-right: 15px;
+            line-height: 2;
+            padding: 6px;
+        }
+        .but{
+            background-color: rgb(67, 147, 67);
+            color: white;
+            border-radius: 8px;
+            padding: 5px 6px;
+            border: none;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- city-selection-start -->
+
+    <div class="city-box">
+        <div class="city-inner">
+            <div class="city-selection">
+                <div class="city-list">
+                    <div class="title">Select your country/city</div>
+                    <div class="dropdown-wrapper">
+                        <div>
+                            <select name="select_country" id="">
+                                <option value="">Select Country</option>
+                                <option value="india">India</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="selected_city" id="selected_city" onchange="confirm()">
+                                <option value="Select City">Select City</option>
+                                <option value="Bangalore">Banglore</option>
+                                <option value="Pune"> Pune</option>
+                                <option value="Delhi">Delhi NCR</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Patna">Patna</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <button disabled="disabled" class="city-box-btn" onclick="confirmCity()">Confirm</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- city-selection-end -->
+
+
+     <!-- header start -->
+     <div class="header" id="header">
+        <div><img src="/images/ham.png" id="ham" onclick="showSideBar()"></div>
+        <div><img src="/images/nav_logo.png" id="nav_logo"></div>
+        <div id="nav">
+            <ul>
+                <!-- <li>Become a Host</li> -->
+                <a href="host.html">Become a Host</a>
+                    <a href="ZMS.html">ZMS</a>
+                
+                <a href="signup.html" id="user_not_login">
+                     <li id="login">Login/Signup</li>
+                </a>
+               
+                <li id="user">
+                    <a href="#" id="nav_name"></a>
+                    <i class="icon-user"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- header end -->
+
+    <div id="body">
+
+        <div id="filter">
+            <div class="filter_kms">
+                <div class="filter_heading">Free kms:</div>
+                <div class="filter_item_kms">
+                    <button onclick="nintyfun()" class="filter_list">90</button>
+                    <button onclick="onetwontyfun()" class="filter_list">120</button>
+
+                </div>
+            </div>
+
+            <div class="filter_fule">
+                <div class="filter_heading">Fuel Cost:</div>
+                <div class="filter_items">
+                    <div class="filter_item">
+                        Not Included
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="filter_Seats">
+                <div class="filter_heading">Seats :</div>
+                <div class="filter_items">
+                    <button onclick="five()" id="filter_item1">5</button>
+                    <button onclick="six()" id="filter_item1">6</button>
+                    <button onclick="seven()" id="filter_item1">7</button>
+
+
+                </div>
+
+            </div>
+
+            <div class="filter_cartype">
+                <div class="filter_cartype_heading">Car Types:</div>
+                <div class="filter_cartype_items">
+                    <button onclick="hatchbackcar()" id="kms_border">hatchback</button>
+                    <button onclick="Sedancar()" id="kms_border">Sedan</button>
+                </div>
+            </div>
+
+            <div class="filter_Transmission">
+                <div class="filter_heading">Transmission :</div>
+                <div class="filter_item2">
+                    <div class="list">
+                        Manual
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter_Delivery">
+                <div class="filter_heading">Delivery Type :</div>
+                <div class="filter_item3">
+                    <button onclick="Homecar()" class="filter_list3">Home Delivery</button>
+                    <button onclick="Airportcar()" class="filter_list3">Airport</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div id="top1">
+                <span id="top11"></span>
+                <span id="top12">→</span>
+                <span id="top13"></span>
+            </div>
+            <div id="top2"></div>
+
+            <div id="top3">
+                <div class="home_delivery">
+                    <div class="icon1"><img src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/images/original/976c02875a91f8e252ab53c09f8f30b22ae0e905.png?1595735439">
+                    </div>
+                    <div class="delivery_heading">
+                        <div class="card_heading">
+                            Get Home Delivery starting at just ₹ 49
+                        </div>
+                        <div class="card_sub_heading">
+                            Don't want to go for pick-up? Select Home Delivery on the next step
+                        </div>
+                        <!-- car pics -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="cont">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+   <!-- side-bar-start -->
+
+   <div class="sidebar-component">
+    <div class="sidebar-ovl"></div>
+    <div class="sidebar">
+        <a href="signup.html" class="f-1 a-i not-loggedin">
+            <div class="icon">
+                <i class="material-icons">
+                    <img src="/images/user.png" class="d-img">
+                </i>
+            </div>
+            <span>Login or Signup</span>
+        </a>
+
+        <a href="#" class="user-logged-in">
+            <div class="d-f jc-c">
+                <div class="details f-1 as-fe">
+                    <h3 id="side_name">Preeti Bildani</h3>
+                    <div id="side_email">preetibildani92@gmail.com</div>
+                    <div id="side_phone">9130843319</div>
+                </div>
+
+            </div>
+
+        </a>
+        <nav class="list">
+            <a href="#" class="item f-1 a-i" onclick="changeCity()">
+                <div class="icon">
+                    <i class="material-icons">
+                        <img src="/images/loc.png" class="d-img">
+                    </i>
+                </div>
+                <div>
+                    <div>Change city</div>
+                    <div class="sm">Delhi NCR</div>
+                </div>
+            </a>
+            <a href="#" class="item f-1 a-i">
+                <div class="icon">
+                    <i class="material-icons">
+                        <img src="/images/supermiler_menu_logo.png">
+                    </i>
+                </div>
+                <div>
+                    <div>Supermiler Club</div>
+                </div>
+            </a>
+            <a href="#" class="item f-1 a-i">
+                <div class="icon">
+                    <i class="material-icons">
+                        <img src="/images/des.png" class="d-img">
+                    </i>
+                </div>
+                <div>
+                    <div>Policies</div>
+                </div>
+            </a>
+            <a href="#" class="item f-1 a-i">
+                <div class="icon">
+                    <i class="material-icons">
+                        <img src="/images/call.png" class="d-img">
+                    </i>
+                </div>
+                <div>
+                    <div>Help & Support</div>
+                </div>
+                <div>
+            </a>
+            <div class="item a-i logout">
+                <i class="exit-icon" onclick="logout()"></i>
+                Logout
+            </div>
+        </nav>
+    </div>
+</div>
+    <div id="main">
+        <div class="bo">
+            <div>
+                <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/20070f9f819b45a90da8e67f51b2d76b59e6c8e7.png?1584525395" alt=""/>
+            </div>
+            <div class="pp">
+                <h3>Hyundai Creta</h3>
+                <p>Number Of seat - 7</p>
+                <p>Car Type - Manual</p>
+    
+            </div>
+            <div class="blu">
+                <button><a class="but" href="bookingsummary.html">Book Now</a></button>
+                <p>price - $50</p>
+            </div>
+        </div>
+        <div class="bo">
+            <div>
+                <img class="im" src="https://tse1.mm.bing.net/th?id=OIP.amXF5-MJfAQgoIhP9MYzaQHaD4&pid=Api&P=0&w=323&h=169" alt=""/>
+            </div>
+            <div class="pp">
+                <h3 >Hyundai Creta</h3>
+                <p>Number Of seat - 5</p>
+                <p>Car Type - Hatch Back</p>
+    
+            </div>
+            <div class="blu">
+                <button><a class="but" href="bookingsummary.html">Book Now</a></button>
+                <p>price - $150</p>
+            </div>
+        </div>
+        <div class="bo">
+            <div>
+                <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/741d5e6e6b4a35cc2623eaf23e251357903995a1.jpg?1628513745" alt=""/>
+            </div>
+            <div class="pp">
+                <h3 >Tata Naxon</h3>
+                <p>Number Of seat - 6</p>
+                <p>Car Type - Hatch Back</p>
+    
+            </div>
+            <div class="blu">
+                <button><a class="but" href="bookingsummary.html">Book Now</a></button>
+                <p>price - $510</p>
+            </div>
+        </div>
+        <div class="bo">
+            <div>
+                <img class="im" src="https://tse3.mm.bing.net/th?id=OIP.Z5vWdA4ZILVRD_Rn3TOQjQHaEK&pid=Api&P=0&w=312&h=175" alt=""/>
+            </div>
+            <div class="pp">
+                <h3 >Tata Tigor</h3>
+                <p>Number Of seat - 6</p>
+                <p>Car Type - Hatch Back</p>
+    
+            </div>
+            <div class="blu">
+                <button><a class="but" href="bookingsummary.html">Book Now</a></button>
+                <p>price - $120</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+<!-- <a href="bookingSummary.html"><i class='fas fa-arrow-alt-circle-right' style='font-size:24px'></i></a> -->
+<a href="bookingSummary.html">
+<img id="image" src="https://tse3.mm.bing.net/th?id=OIP.Nrj2I0pTpjp2uKHYcRXxlgHaHa&pid=Api&P=0&w=170&h=170" alt=""\>
+</a>
+<!-- side-bar-end -->
+
+<!-- <div id="main">
+    <div class="bo">
+        <div>
+            <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/20070f9f819b45a90da8e67f51b2d76b59e6c8e7.png?1584525395" alt=""/>
+        </div>
+        <div class="pp">
+            <h3>Hyundai Creta</h3>
+            <p>Number Of seat - 7</p>
+            <p>Car Type - Manual</p>
+
+        </div>
+        <div class="blu">
+            <button><a href="bookingsummary.html">Book Now</a></button>
+            <p>price - $50</p>
+        </div>
+    </div>
+    <div class="bo">
+        <div>
+            <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/20070f9f819b45a90da8e67f51b2d76b59e6c8e7.png?1584525395" alt=""/>
+        </div>
+        <div class="pp">
+            <h3 >Hyundai Creta</h3>
+            <p>Number Of seat - 5</p>
+            <p>Car Type - Hatch Back</p>
+
+        </div>
+        <div class="blu">
+            <button><a href="bookingsummary.html">Book Now</a></button>
+            <p>price - $50</p>
+        </div>
+    </div>
+    <div class="bo">
+        <div>
+            <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/741d5e6e6b4a35cc2623eaf23e251357903995a1.jpg?1628513745" alt=""/>
+        </div>
+        <div class="pp">
+            <h3 >Tata Naxon</h3>
+            <p>Number Of seat - 6</p>
+            <p>Car Type - Hatch Back</p>
+
+        </div>
+        <div class="blu">
+            <button><a href="bookingsummary.html">Book Now</a></button>
+            <p>price - $50</p>
+        </div>
+    </div>
+    <div class="bo">
+        <div>
+            <img class="im" src="https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/55cf48c3aca88c14b839a360411dfe0dcc761c5a.jpg?1618911344" alt=""/>
+        </div>
+        <div class="pp">
+            <h3 >Tata Tigor</h3>
+            <p>Number Of seat - 6</p>
+            <p>Car Type - Hatch Back</p>
+
+        </div>
+        <div class="blu">
+            <button><a href="bookingsummary.html">Book Now</a></button>
+            <p>price - $50</p>
+        </div>
+    </div>
+</div> -->
+
+</body>
+
+</html>
+<script src="carpage.js"></script>

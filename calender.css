@@ -1,0 +1,171 @@
+.container-cal {
+    width      : 50%;
+    margin-top : 2%;
+    margin-left: 1%;
+  
+  }
+  
+  .chooseTime {
+    display    : flex;
+    width      : 100%;
+    margin-left: 1%;
+  
+  }
+  
+  .chooseTime h2 {
+    width      : 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-align : left;
+  }
+  
+  .subtext {
+    margin-right: 2%;
+  }
+  
+  .showDate {
+    width      : 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border     : .5px solid #E0E0E0;
+    margin-left: 40%;
+  
+  }
+  
+  #showDate {
+    display: flex;
+    gap    : 30%;
+    padding: .5%;
+  }
+  
+  #leftBoxcal {
+    font-size  : 12px;
+    font-weight: 400;
+    text-align : left;
+  
+    margin-left: 3%;
+  }
+  
+  #right-arrow {
+    font-size  : 12px;
+    font-weight: 400;
+    margin-top : 0%;
+  }
+  
+  #rightBoxcal {
+    font-size  : 12px;
+    font-weight: 400;
+    text-align : left;
+  
+    margin-right: 0%;
+  }
+  
+  .calenderContainer {
+    display    : flex;
+    width      : 100%;
+    margin-left: 40%;
+  }
+  
+  .showCalender {
+    width      : 50%;
+    margin-left: 0%;
+    height     : 40%;
+    border     : none;
+  }
+  
+  #calendertemp {
+    width: 100%;
+  }
+  
+  #calendertemp2 {
+    width: 100%;
+  }
+  
+  .pickTime {
+    width      : 100%;
+    margin-left: 40%;
+  }
+  
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width             : 100%;
+    height            : 5px;
+    border-radius     : 5px;
+    background        : #10a310;
+    outline           : none;
+    opacity           : 0.7;
+    -webkit-transition: .2s;
+    transition        : opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance        : none;
+    width             : 80px;
+    height            : 25px;
+    border-radius     : 10px;
+    background        : #BDBDBD;
+    cursor            : pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width        : 25px;
+    height       : 25px;
+    border-radius: 50%;
+    background   : #04AA6D;
+    cursor       : pointer;
+  }
+  
+  .getContinue {
+    width      : 100%;
+    text-align : center;
+    padding    : .5%;
+    margin-left: 40%;
+  
+  }
+  
+  .getContinue button {
+    border        : none;
+    background    : #10a310;
+    width         : 85%;
+    padding       : 2.5%;
+    font-family   : sans-serif;
+    font-size     : 16px;
+    font-weight   : 600;
+    line-height   : 16px;
+    letter-spacing: 0.8px;
+    color         : #fff;
+    margin        : 0%;
+    border-radius : 8px;
+  }
+  
+  .getContinue2 {
+    width      : 100%;
+    text-align : center;
+    padding    : .5%;
+    margin-left: 40%;
+    display: none;
+  
+  }
+  
+  .getContinue2 button {
+    border        : none;
+    background    : #10a310;
+    width         : 85%;
+    padding       : 2.5%;
+    font-family   : sans-serif;
+    font-size     : 16px;
+    font-weight   : 600;
+    line-height   : 16px;
+    letter-spacing: 0.8px;
+    color         : #fff;
+    margin        : 0%;
+    border-radius : 8px;
+  }

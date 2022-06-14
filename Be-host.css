@@ -1,0 +1,101 @@
+.host{
+    width:900px;
+    margin: auto;
+}
+.host-box-1{
+    color:white;
+    padding-top:20px;
+    padding-left: 20px;
+    text-align: top;
+    background-color:#7CB342;
+    
+    height: 110px;
+}
+.host-box-1-grid{
+    display: grid;
+    
+    grid-template-columns: 140px 400px;
+}
+.host-box-1-font{
+    margin-top: 0px;;
+    font-size:40px;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+a{
+    
+    text-decoration: none;
+    
+}
+
+
+
+.form{
+    
+    
+    margin: auto;
+    border: 1px solid #E5E5E5;
+    background-color: white;
+  
+    
+}
+.form-1{
+    
+    width:100%;
+    margin: auto;
+    padding-left: 15px;
+    
+    
+
+
+    
+  
+    
+}
+
+
+
+.meal-s-with-2{
+    width:180px;
+    height: 40px;
+    border-radius: 5px;
+    font-size:20px;
+    padding-left:15px;
+    border: 1px solid #D4D4D4;
+    background-color:red;
+    text-align:center;
+    color: white;
+    padding-top:15px;
+}
+.boton-size{
+    width:200px;
+    height:50px;
+}
+.boton-massage{
+    width:300px;
+    height:150px;
+    margin-left: 100px;
+}
+.boton-phone{
+    width:250px;
+    height:50px;
+    margin-left: 47px;
+}
+.boton-email{
+    width:350px;
+    height:40px;
+    /* margin-left: 105px; */
+}
+
+.form-contact{
+    text-align: center;
+
+}
+.form-submit{
+   margin-left: 200px;
+
+}

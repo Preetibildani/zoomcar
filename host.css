@@ -1,0 +1,539 @@
+
+/* header-start */
+a{
+    
+    text-decoration: none;
+    
+}
+.header{
+    padding: 16px;
+    background-color: #000;
+    color: white;
+    align-items: center;
+    display: flex;
+   
+}
+.header-color{
+    color: white;
+
+}
+#ham{
+    width: 30px;
+    cursor: pointer;
+}
+.header>div:nth-child(2){
+    padding-left: 10px;
+    flex-grow: 8;
+}
+.header>div:nth-child(3){
+    flex-grow: 2;
+}
+
+
+.header>#nav>ul{
+    margin: 0;
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+    font-size: 18px;
+    gap: 80px;
+    
+}
+
+.header>#nav>ul>li{
+   margin: auto;
+   cursor: pointer;
+}
+.host-box-1-button{
+    /* margin-top: 20px; */
+    background-color: #00C853;
+    color: white;
+    height: 50px;
+    width: 170px;;
+    border-radius: 5px;
+}
+
+/* header-end */
+
+/* sidebar-start */
+
+.sidebar-component{
+    position: fixed;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.sidebar-component .sidebar-ovl{
+    position: absolute;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    will-change: opacity;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar-component .sidebar{
+    background: #fff;
+    position: fixed;
+    width: 85%;
+    height: 120%;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(-102%, 0, 0);
+    transform: translate3d(-102%, 0, 0);
+    will-change: transform;
+    box-shadow: 3px 0 8px 1px rgba(0,0,0,0.4);
+    max-width: 400px;
+   
+}
+.not-loggedin{
+    background-color: #e5e8ec;
+}
+.sidebar-component nav.list .item{
+    padding: 13px 16px;
+    color: #4d4d4d;
+}
+.f-1{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    padding: 13px 16px;
+    color: #4d4d4d;
+}
+.sidebar-component nav.list .item .sm{
+    opacity: .4;
+    font-size: 12px;
+}
+.icon{
+    margin-right: 5px;
+    background-color: #33414f;
+    width: 32px;
+    height: 30px;
+    border-radius: 50%;
+   
+}
+.icon-FAQs{
+    margin-right: 5px;
+    background-color: #f3f7fa;
+    width: 32px;
+    height: 30px;
+    border-radius: 50%;
+   
+}
+
+.icon .material-icons .d-img{
+    width:18px;
+    height: 18px;
+    margin-top: 20%;
+    margin-left: 22%;
+
+}
+
+.icon .material-icons img{
+    width:32px;
+    height: 30px;
+
+}
+.a-i{
+    align-items: center;
+}
+/* sidebar-end */
+
+
+
+ /* Video Integration  */
+
+
+
+.video-stories-1 {
+    width: 90%;
+    height: 350px;
+    padding: 1%;
+    margin-top: 0%;
+    margin-left: 3%;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg");
+    background-size: cover;
+
+
+}
+
+.bg-subtext {
+    width: 100%;
+    height: 300px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    align-items: center;
+    vertical-align: center;
+    text-align: left;
+    position: relative;
+    top: 100px;
+    left: 70px;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.bg-smalltext {
+    margin-top: 2%;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 200;
+    align-items: center;
+    vertical-align: center;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.bg-smalltext button {
+    background-color: #10a310;
+    border: none;
+    width: 15%;
+    height: 15%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 1%;
+    letter-spacing: 1.0px;
+}
+
+.videoStories-timeline {
+    margin-left: 4%;
+    position: absolute;
+    display: flex;
+    flex-grow: 0;
+    width: 88%;
+    background: -webkit-gradient(linear, top, bottom, from(rgba(0, 0, 0, .2)), to(transparent));
+    background: linear-gradient(180deg, rgba(0, 0, 0, .5), transparent);
+    z-index: 2;
+    padding: 0 2px 8px;
+
+}
+
+.videoStories-progress {
+    background: #fff;
+    height: 3px;
+    border-radius: 3px;
+    width: 0;
+}
+
+.videoStories-slice {
+    background: #858585;
+    height: 3px;
+    border-radius: 3px;
+    margin: 8px 4px;
+    width: 100%;
+}
+.video-stories-2 {
+    width: 90%;
+    margin: 0;
+    height: 700px;
+}
+
+.video-stories-2 video {
+    width: 100%;
+    margin-left: 5%;
+    height: 75%;
+    box-shadow: 1px 30px #ECEFF1, -6em 0 6em #ECEFF1;
+}
+
+
+
+ /* Video Integration  */
+
+
+
+
+
+
+
+
+
+/* 3 Simple steps to Start Earning with your car in 24 hours-----START */
+.host-main{
+    width:1100px;
+    margin: auto;
+
+}
+.host-box-1{
+    text-align: center;
+    font-size: 53px;;
+    
+    
+}
+.host-box-1-grid{
+    display: grid;  
+    margin:20px;
+    font-size: 20px;
+    grid-template-columns: 49% 39%;
+}
+.host-box-1-grid-img{
+    width:450px;
+    margin-left: 30px;;
+}
+/* 3 Simple steps to Start Earning with your car in 24 hours-----END */
+
+/* How we protect your car---start */
+.host-main-box-2{
+    height: 420px;
+    width: 1100px;
+
+}
+.host-main-box-2-flex{
+    
+    display: flex;
+   
+    overflow-x: auto;
+    
+    
+
+}
+.host-main-box-2-m{
+    margin-left:30px;
+    max-width:300px; 
+
+}
+.host-main-box-2-img{
+    width: 300px; 
+
+}
+.host-main-box-2-color{
+    color: #737373;
+
+}
+
+/* How we protect your car---start */
+/* your sefty----stat */
+.host-box-3-img{
+    width: 1100px;
+}
+/* your sefty----end */
+/* share your baleno---start */
+
+.host-box-4{
+    width: 550px;
+    font-size:30px;
+    margin:0px;
+}
+.host-box-4-font{
+    width: 550px;
+    font-size:20px;
+}
+.host-box-4-button{
+    margin-top: 20px;
+    background-color: #00C853;
+    color: white;
+    height: 50px;
+    width: 170px;;
+    border-radius: 5px;
+}
+.host-box-4-font-1{
+    margin-top: 20px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    
+}
+
+/* share your baleno---End */
+/* you earn 75000------start  */
+.host-box-5{
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #1C1917;
+ 
+    
+}
+.host-box-5-grid{
+  
+    display: grid;
+    grid: 500px 200px;
+    height: 350px;
+    display: grid;
+    grid-template-columns:45% 40% ;
+    
+}
+.host-box-5-color{
+    color: white;
+    font-size: 20px;
+   
+}
+.host-box-5-img{
+    width: 500px;
+    text-align: center;
+    justify-content: center;
+   
+}
+.host-box-5-color-f{
+    color: white;
+    font-size: 17px;
+   
+}
+
+
+/* you earn 75000------end  */
+
+/* rating 4.5---start */
+.host-box-6{
+    margin-top:60px;
+    height: 200px;
+    border-radius:10px;
+    background-color:#E5E5E5;
+}
+
+.host-box-6-text{
+    padding-top:30px;
+    font-size:14px;
+    text-align: center;
+}
+
+/* rating 4.5---End */
+
+/* what are the zoomcar host user sying?---start */
+
+
+.host-box-7{
+    margin-top:60px;
+    height: 650px;
+    border-radius:10px;
+    background-color:#F5F5F5;
+}
+.host-box-7-grid{
+  
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px 250px;  
+    overflow-x: auto;  
+}
+.host-box-7-font{
+  
+  font-size:18px; 
+  color: #737373; 
+  margin:20px 20px 10px 0px;
+}
+.host-box-7-color{
+  
+    font-size:18px; 
+    color: #A8A29E; 
+    
+  }
+
+/* what are the zoomcar host user sying?---end */
+
+
+/* stalii have a question-----start------ */
+
+.host-box-8{
+    padding-top:50px;
+    display:grid;
+    grid-template-columns: 300px 800px;
+}
+.host-box-8-L-font{
+    font-size:22px;
+}
+.host-box-8-R{
+    text-align: top;
+   
+    margin:auto;
+    display:grid;
+    grid-template-columns: 700px 100px;
+}
+.host-box-8-R-font{
+    font-size:17px;
+}
+.host-box-8-R-img{
+    text-align: center;
+    width:30px;
+    height: 30px;
+}
+
+.host-box-8-border{
+    border: solid 1.2px #BDBDBD;
+    width: 750px;
+    /* height: 20px; */
+}
+
+
+
+/* stalii have a question-----end------ */
+
+
+
+
+/* <!-- still confused----start-------- --> */
+
+.host-box-9{
+    padding-top:50px;
+    display:grid;
+    grid-template-columns: 300px 800px;
+    padding-bottom: 0px;
+}
+.host-box-9-border{
+    border: solid 1.2px #BDBDBD;
+    width: 800px;
+    border-radius: 5px;
+    /* height: 20px; */
+}
+.host-box-9-R{
+    margin-left: 20px;
+    /* padding-top:50px */
+    display:grid;
+    grid-template-columns: 550px 250px;
+
+}
+.host-box-9-R-In{
+    text-align: top;
+    display:grid;
+    grid-template-columns: 300px 250px;
+
+}
+        
+/* <!-- still confused----end-------- --> */
+
+/* never stop living---start-------- */
+
+.host-box-10-border{
+    margin-top:50px;
+    background-color:#F5F5F5 ;
+    
+    width: 1100px;
+    height: 200px;
+    border-radius: 5px;
+    /* height: 20px; */
+}
+.host-box-10-In{
+    padding-top:50px ;
+    
+
+}
+.host-box-10-border-in{
+    margin-left: 20px;
+    border: solid .5px #4E342E;
+    width: 70px;
+    
+    /* height: 20px; */
+}
+
+/* never stop living---end-------- */
+
+
+
+
+/* <!-- more about zoom host------start---- -->
+
+
+
+        
+        <!-- more about zoom host------end---- --> */

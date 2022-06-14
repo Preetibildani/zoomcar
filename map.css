@@ -1,0 +1,103 @@
+html, body, #map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	height: 75%;
+	width: 100%;
+}
+
+label {
+	padding: 20px 10px;
+	display: inline-block;
+	font-size: 1.5em;
+}
+
+input {
+	font-size: 0.75em;
+	padding: 10px;
+}
+
+
+.subpage {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	background: #fff;
+	z-index: 999;
+	-webkit-animation: 0.3s fadeInUp ease;
+	animation: 0.3s fadeInUp ease;
+}
+
+.subpage .header {
+	position: relative;
+	z-index: 2;
+	padding: 16px;
+	background-color: white;
+}
+
+.layout-two .main {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+	display: flex;
+	flex-direction: column;
+}
+
+.component-map-picker {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+}
+
+.component-map-picker .btn-wrapper {
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	left: 50%;
+	width: 300px;
+	margin-left: -150px;
+}
+
+.dummy-field {
+	background: #ff0;
+	height: 48px;
+	border-radius: 4px;
+	color: #000;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	position: relative;
+	z-index: 2;
+	margin: 10px 16px;
+	display: flex;
+}
+
+.component-map-picker .map-wrapper {
+	position: relative;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0%;
+	display: flex;
+	flex-direction: column;
+}
+
+.dummy-field input {
+	font-size: 0.75em;
+	padding: 10px;
+	color: black;
+}
+
+.dummy-field .icon-search img {
+	width: 30px;
+	margin-top: 6px;
+}

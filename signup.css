@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "IBM Plex Sans";
+}
+hr {
+  margin: 10px;
+  border: 1px solid #eeeeee;
+}
+img {
+  width: 100%;
+}
+#pcontainer {
+  width: 420px;
+  margin: auto;
+}
+
+.details {
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 28px;
+  color: #1f1f1f;
+  margin-top: 15px;
+  padding: 16px 0 24px 0;
+}
+
+.details + img {
+  width: 32px;
+  margin: 10px 0 0 30px;
+  /* margin: 100px 4px; */
+  /* border: 1px solid black; */
+  height: 30px;
+}
+button {
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 900;
+  line-height: 16px;
+  color: #10a310;
+  margin: 10px;
+  text-decoration: none;
+}
+img + button {
+  background-color: white;
+  /* border: 1px solid black; */
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+}

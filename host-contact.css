@@ -1,0 +1,79 @@
+/* <!-- host contact ----start---- -->
+<!-- host contact ----end---- --> */
+a{
+    
+    text-decoration: none;
+    
+}
+#form-a{
+    margin-top:130px;
+    background-color:#F5F5F5;
+}
+
+
+.form{
+    
+    width:60%;
+    margin: auto;
+    border: 1px solid #E5E5E5;
+    background-color: white;
+  
+    
+}
+.form-1{
+    
+    width:75%;
+    margin: auto;
+    
+    
+
+
+    
+  
+    
+}
+
+
+
+.meal-s-with-2{
+    width:180px;
+    height: 40px;
+    border-radius: 5px;
+    font-size:20px;
+    padding-left:15px;
+    border: 1px solid #D4D4D4;
+    background-color:red;
+    text-align:center;
+    color: white;
+    padding-top:15px;
+}
+.boton-size{
+    width:200px;
+    height:50px;
+}
+.boton-massage{
+    width:300px;
+    height:150px;
+    margin-left: 100px;
+}
+.boton-phone{
+    width:250px;
+    height:50px;
+    margin-left: 47px;
+}
+.boton-email{
+    width:250px;
+    height:50px;
+    margin-left: 105px;
+}
+
+.form-contact{
+    text-align: center;
+
+}
+.form-submit{
+   margin-left: 200px;
+
+}
+
+/* <!-- host contact ----end---- --> */ 

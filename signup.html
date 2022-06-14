@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div id="pcontainer">
+      <div class="pimg">
+        <img
+          src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg"
+        />
+      </div>
+      <div class="details">Enter details to login/sign-up</div>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Enter mobile number"
+        style="width: 420px; height: 45px; border: 1px solid #eeeeee"
+        onclick="location.href='mobile_login.html'"
+      />
+
+      <hr />
+      <button onclick="location.href='email_login.html'" class="mail">
+        Continue with Email ID
+      </button>
+
+      <hr />
+
+      <button onclick="location.href='social.html'" class="mail">Continue via social</button>
+    </div>
+  </body>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // utilsScript is useful for providing validation and pretty formatting
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js",
+    });
+  </script>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Google Maps JavaScript API</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="subpage layout-two">
+        <div class="header">
+            <a href="/location.html">
+                <div>
+                    <i class="icon icon-arrow-left"></i>
+                </div>
+            </a>
+
+        </div>
+
+        <section class="main">
+            <div class="component-map-picker">
+                <div class="map-wrapper">
+                    <div class="dummy-field">
+                        <div>
+                            <i class="icon-search"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
+                                    alt=""></i>
+                        </div>
+
+                        <input id="map-search" class="controls" type="text" placeholder="Search Box" size="104"><br>
+                    </div>
+
+                    <div id="map">
+
+                    </div>
+
+                </div>
+                <div class="btn-wrapper">
+                    <a href="/index.html">
+                        <div class="btn-primary">
+                            <span>Continue</span>
+                        </div>
+                    </a>
+
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script src="map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wzKiv1MaS2bETRlpAeJkjJPvRKs8xe0&libraries=places&callback=initialize"></script>
+</body>
+
+</html>

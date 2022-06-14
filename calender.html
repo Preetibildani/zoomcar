@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calender</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="calender.css">
+</head>
+
+<body>
+    <div class="container-cal">
+        <div class="chooseTime ">
+
+            <h2> <i class="fas fa-arrow-left  subtext"> </i> <span class="time-text">Choose Trip Start Time</span>  </h2>
+
+        </div>
+        <div class="showDate" id="showDate">
+            <div id="leftBoxcal">
+                Start Date and Time
+                <div class="lbd"></div>
+                <div class="lbd-time"></div>
+            </div>
+            <div class=" right-arrow">
+                <h3> <i class="fas fa-arrow-right "> </i> </h3>
+            </div>
+            <div id="rightBoxcal">
+                End Date and Time
+                <div class="rbd"></div>
+                <div class="rbd-time"></div>
+            </div>
+
+        </div>
+        <div class="calenderContainer">
+
+
+            <div class="showCalender">
+                <input type="date" oninput="startDate()" id="calendertemp" name="trip-start" value="2021-11-10"
+                    min="2021-11-10" max="2025-12-31">
+            </div>
+
+            <div class="showCalender">
+                <input type="date" oninput="endDate()" id="calendertemp2" name="trip-start" value="2021-11-10" min="2021-11-10"
+                    max="2025-12-31">
+            </div>
+
+        </div>
+
+        <div class="pickTime">
+            <h4>Pick Up Time</h4>
+            <div class="slidecontainer">
+                <input type="range" min="0.0" max="23.00" value="23" class="slider" id="myRange" oninput="timeChange()">
+                <p>Time: <span id="demo"></span></p>
+            </div>
+
+        </div>
+
+        <div class="getContinue">
+            <button onclick="startTrip()">CONTINUE</button>
+        </div>
+        <div class="getContinue2">
+            <button onclick="endTrip()">CONTINUE</button>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function startDate() {
+        let start = document.getElementById("calendertemp").value;
+        let lbd = document.querySelector(".lbd");
+        lbd.innerText = start;
+    }
+
+    function timeChange() {
+        let demo = document.getElementById("demo");
+        let myRange = document.getElementById("myRange").value;
+
+
+        if (myRange > 12) {
+            demo.innerText = `${myRange}:00 PM`;
+
+        }
+        else {
+            demo.innerText = `${myRange}:00 AM`;
+
+        }
+    }
+
+
+    function startTrip(){
+        let myRange = document.getElementById("myRange").value;
+        let lbd_time = document.querySelector(".lbd-time");
+        let lbd = document.querySelector(".lbd").innerText;
+
+        let time_text = document.querySelector(".time-text");
+        time_text.innerText = "Choose Trip End Time";
+
+        let start = [];
+        start.push(lbd);
+        
+
+        if (myRange > 12) {
+            lbd_time.innerText = `${myRange}:00 PM`;
+            start.push(`${myRange}:00 PM`);
+
+        }
+        else {
+            lbd_time.innerText = `${myRange}:00 AM`;
+            start.push(`${myRange}:00 AM`);
+
+        }
+
+        localStorage.setItem("start_Date",JSON.stringify(start));
+
+        let getContinue2 = document.querySelector(".getContinue2");
+        getContinue2.style.display = "block";
+
+        let getContinue1 = document.querySelector(".getContinue");
+        getContinue1.style.display = "none";
+
+
+    }
+
+    function endDate() {
+        let end = document.getElementById("calendertemp2").value;
+        let rbd = document.querySelector(".rbd");
+        rbd.innerText = end;
+    }
+
+
+    function endTrip(){
+        let myRange = document.getElementById("myRange").value;
+        let rbd_time = document.querySelector(".rbd-time");
+
+
+        let rbd = document.querySelector(".rbd").innerText;
+
+        let end = [];
+        end.push(rbd);
+
+        if (myRange > 12) {
+            rbd_time.innerText = `${myRange}:00 PM`;
+            end.push(`${myRange}:00 PM`);
+
+        }
+        else {
+            rbd_time.innerText = `${myRange}:00 AM`;
+            end.push(`${myRange}:00 AM`);
+
+        }
+
+        localStorage.setItem("end_Date",JSON.stringify(end));
+
+        window.location.href = "index.html";
+
+
+    }
+
+</script>
